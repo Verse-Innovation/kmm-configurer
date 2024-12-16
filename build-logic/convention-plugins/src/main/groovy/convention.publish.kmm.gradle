@@ -1,0 +1,8 @@
+plugins {
+    id("convention.publish.base")
+}
+
+ext {
+    enableIosTargets = true
+}
+

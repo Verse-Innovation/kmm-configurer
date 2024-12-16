@@ -1,0 +1,111 @@
+{
+  "application": {
+    "version": 1,
+    "name": "Super app with multiple products",
+    "configuration": {
+      "enabled": true,
+      "properties": {
+        "app_specific_property": "app_specific_property_value"
+      }
+    },
+    "products": [
+      {
+        "name": "default",
+        "configuration": {
+          "enabled": true,
+          "properties": {
+            "product_specific_property": "product_specific_property_value"
+          }
+        },
+        "modules": [
+          {
+            "name": "default",
+            "configuration": {
+              "enabled": true,
+              "properties": {
+                "module_specific_property": "module_specific_property_value"
+              }
+            },
+            "features": [
+              {
+                "name": "default",
+                "configuration": {
+                  "enabled": true,
+                  "properties": {
+                    "feature_specific_property": "feature_specific_property_value"
+                  }
+                },
+                "experiments": [
+                  {
+                    "name": "some_arbitrary_simple_experiment_1",
+                    "configuration": {
+                      "enabled": true,
+                      "properties": {
+                        "experiment_specific_property": "feature_specific_property_value"
+                      }
+                    }
+                  },
+                  {
+                    "name": "some_arbitrary_experiment_with_infinite_depth_sub_experiments_2",
+                    "configuration": {
+                      "enabled": true,
+                      "properties": {
+                        "experiment_specific_property": "feature_specific_property_value"
+                      }
+                    },
+                    "experiments": [
+                      {
+                        "name": "some_arbitrary_sub_experiment_with_infinite_depth_sub_experiments_1",
+                        "configuration": {
+                          "enabled": true,
+                          "properties": {
+                            "sub_experiment_specific_property": "sub_experiment_specific_property_value"
+                          }
+                        },
+                        "experiments": []
+                      },
+                      {
+                        "name": "some_arbitrary_simple_sub_experiment_2",
+                        "configuration": {
+                          "enabled": true,
+                          "properties": {
+                            "sub_experiment_specific_property": "sub_experiment_specific_property_value"
+                          }
+                        }
+                      },
+                      {}
+                    ]
+                  },
+                  {
+                    "name": "some_arbitrary_experiment_3"
+                  },
+                  {
+                    "name": "some_arbitrary_featur4_and_so_on"
+                  }
+                ]
+              },
+              {
+                "name": "some_arbitrary_feature2"
+              },
+              {
+                "name": "some_arbitrary_feature3_and_so_on"
+              }
+            ]
+          },
+          {
+            "name": "some_arbitrary_module2"
+          },
+          {
+            "name": "some_arbitrary_module3_and_so_on"
+          }
+        ]
+      },
+      {
+        "name": "some_arbitrary_product3"
+      },
+      {
+        "name": "some_arbitrary_product3_and_so_on"
+      }
+    ]
+  }
+}

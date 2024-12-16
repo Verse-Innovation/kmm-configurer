@@ -1,0 +1,21 @@
+
+def secretsGradleFile = project.rootProject.file("gradle/secrets.gradle")
+apply from: "$secretsGradleFile"
+
+repositories {
+    google()
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url = uri("https://jitpack.io")
+    }
+
+    maven {
+        url = uri("https://maven.pkg.github.com/pavan2you/kmm-clean-architecture")
+
+        credentials {
+            username = githubUser
+            password = githubToken
+        }
+    }
+}

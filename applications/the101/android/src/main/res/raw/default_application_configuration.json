@@ -1,0 +1,174 @@
+{
+  "application": {
+    "version": 1,
+    "name": "Configurable Application",
+    "configuration": {
+      "enabled": true,
+      "properties": {
+        "frequencyInMs": 60000
+      }
+    },
+    "products": [
+      {
+        "name": "default",
+        "configuration": {
+          "enabled": true,
+          "properties": {
+            "frequencyInMs": 60000
+          }
+        },
+        "modules": [
+          {
+            "name": "home module",
+            "configuration": {
+              "enabled": true,
+              "properties": {
+                "frequencyInMs": 60000
+              }
+            },
+            "features": [
+              {
+                "name": "pizza list card",
+                "configuration": {
+                  "enabled": true,
+                  "properties": {}
+                },
+                "experiments": [
+                  {
+                    "name": "full page card",
+                    "configuration": {
+                      "enabled": true,
+                      "properties": {
+                        "max_times": 3,
+                        "min_app_launches": 2
+                      }
+                    }
+                  },
+                  {
+                    "name": "two cards per page",
+                    "configuration": {
+                      "enabled": false,
+                      "properties": {
+                        "max_times": 1,
+                        "min_app_launches": 0
+                      }
+                    }
+                  },
+                  {
+                    "name": "three cards per page",
+                    "configuration": {
+                      "enabled": true,
+                      "properties": {
+                        "for_app_launches": "even"
+                      }
+                    },
+                    "experiments": [
+                      {
+                        "name": "show footer",
+                        "configuration": {
+                          "enabled": true
+                        }
+                      },
+                      {
+                        "name": "default",
+                        "configuration": {
+                          "enabled": true
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "default",
+                    "configuration": {
+                      "enabled": true
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "secondary",
+        "configuration": {
+          "enabled": true,
+          "properties": {
+            "frequencyInMs": 60000
+          }
+        },
+        "modules": [
+          {
+            "name": "search for cab",
+            "configuration": {
+              "enabled": true,
+              "properties": {
+                "frequencyInMs": 60000
+              }
+            },
+            "features": [
+              {
+                "name": "owned car listing",
+                "configuration": {
+                  "enabled": true,
+                  "properties": {}
+                },
+                "experiments": [
+                  {
+                    "name": "single car card",
+                    "configuration": {
+                      "enabled": true,
+                      "properties": {
+                        "max_times": 3,
+                        "min_app_launches": 2
+                      }
+                    }
+                  },
+                  {
+                    "name": "two cars per page",
+                    "configuration": {
+                      "enabled": false,
+                      "properties": {
+                        "max_times": 1,
+                        "min_app_launches": 0
+                      }
+                    }
+                  },
+                  {
+                    "name": "three car per page",
+                    "configuration": {
+                      "enabled": true,
+                      "properties": {
+                        "for_app_launches": "even"
+                      }
+                    },
+                    "experiments": [
+                      {
+                        "name": "show footer",
+                        "configuration": {
+                          "enabled": true
+                        }
+                      },
+                      {
+                        "name": "default",
+                        "configuration": {
+                          "enabled": true
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "default",
+                    "configuration": {
+                      "enabled": true
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
